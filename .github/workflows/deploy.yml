@@ -40,6 +40,5 @@ jobs:
       - name: Update Lambda function
         run: |
           aws lambda update-function-code \
-            # --function-name ${{ secrets.LAMBDA_FUNCTION_NAME }} \
-            --function-name my‑docker‑lambda
-            --image-uri ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:latest
+            --function-name my-docker-lambda \
+            --image-uri 084374024081.dkr.ecr.ap-south-1.amazonaws.com/lambda-docker-ap:latest  
